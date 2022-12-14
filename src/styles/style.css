@@ -1,0 +1,186 @@
+body {
+    margin: 0;
+    background: #faf9f8;
+    font-family: SegoeUI-SemiBold-final, Segoe UI Semibold, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    background: black;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 20px;
+}
+
+header nav a {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 48px;
+}
+
+header #searchSection {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+header #searchSection img[alt="Search"] {
+    position: absolute;
+    left: 10px;
+}
+
+header #searchSection img[alt="Search"].hidden {
+    display: none;
+}
+
+header #searchSection label[for="search"] {
+    position: absolute;
+    right: 300px;
+    background: white;
+    padding: 10px;
+    opacity: 0;
+    border-radius: 5px;
+}
+
+header #searchSection label[for="search"].hovered {
+    opacity: 1;
+    transition: .3s ease-out;
+}
+
+header #searchSection input:focus {
+    outline: none;
+}
+
+header #searchSection input {
+    height: 30px;
+    width: 250px;
+    border-radius: 8px;
+    padding-left: 40px;
+    font-size: 18px;
+    transition: .3s ease-out;
+    border: 0 solid darkgray;
+}
+
+header #searchSection input:hover {
+    transition: .3s ease-out;
+    border: 5px solid darkgray;
+}
+
+main {
+    padding: 20px;
+}
+
+main #taskList {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+main #doneTaskList {
+    padding-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+main .task {
+    width: 100%;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0px 0.3px 0.9px rgba(0, 0, 0, 10%), 0px 1.6px 3.6px rgba(0, 0, 0, 10%);
+    margin-bottom: 20px;
+}
+
+main .task.hidden {
+    display: none;
+}
+
+main .task .radio {
+    width: 20px;
+    height: 20px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+}
+
+main .task .radio img{
+    opacity: 0;
+    transition: .3s ease-out;
+}
+
+main .task .radio img:hover{
+    opacity: 1;
+    transition: .3s ease-out;
+}
+
+main .task#addTask #options{
+    height: 50px;
+    padding: 0 15px;
+    background: darkgray;
+    margin-top: 5px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main .task#addTask #options #addButton {
+    background: white;
+    border-radius: 0;
+    border: 1px solid black;
+    font-size: 14px;
+    padding: 8px 10px;
+    cursor: not-allowed;
+    color: gray;
+}
+
+main .task#addTask #options #addButton.valid {
+    color: #2564cf;
+    cursor: pointer;
+}
+
+main .task .taskName {
+    height: 50px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+main .task .taskName .leftElement {
+    margin-right: 10px;
+}
+
+main .task #addTaskInput {
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+}
+
+main .task #addTaskInput:focus {
+    outline: none;
+}
+
+main #doneTaskList .task .radio {
+    border: 2px solid aquamarine;
+    background: aquamarine;
+}
+
+main #doneTaskList .task .radio img {
+    opacity: 1;
+}
+
+main #doneTaskList .task .taskName {
+    text-decoration: line-through;
+}
+
+

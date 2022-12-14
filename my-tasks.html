@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>To Do - Prometheus</title>
+    <link rel="icon" type="image/x-icon" href="src/images/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="src/styles/style.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <a id="homeLink">
+                <img src="src/images/favicon.ico" height="50" alt="To Do">
+                To Do
+            </a>
+        </nav>
+        <section id="searchSection">
+            <label for="search" id="searchLabel">Пошук</label>
+            <input type="text" placeholder="" id="search">
+            <img id="searchIcon" src="src/images/search.png" alt="Search">
+        </section>
+    </header>
+    <aside>
+
+    </aside>
+    <main>
+        <section>
+            <h1>Мої задачі</h1>
+        </section>
+        <section id="taskList">
+            <div class="task" id="addTask">
+                <div class="taskName">
+                    <div class="radio leftElement">+</div>
+                    <input type="text" id="addTaskInput" placeholder="Додати задачу">
+                </div>
+                <div id="options">
+                    <button disabled id="addButton">Додати задачу</button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h1>Виконані задачі</h1>
+        </section>
+        <section id="doneTaskList"></section>
+    </main>
+    <script type="module" src="src/js/index.js"></script>
+</body>
+</html>
